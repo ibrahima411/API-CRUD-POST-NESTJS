@@ -4,7 +4,9 @@ import { CreatePostDto } from './dto/createPost.dto';
 import { Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 import { UpdatePostDto } from './dto/updatePost.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Post')
 @Controller('posts')
 export class PostController {
     constructor(readonly postService: PostService){}

@@ -50,7 +50,7 @@ export class AuthService {
             email: user.email
         }
         // Retourner un token JWT
-        const token = this.jwtService.sign(payload, {expiresIn:'2d',secret: this.configService.get('SECRET_KEY')})
+        const token = this.jwtService.sign(payload, {secret: this.configService.get('SECRET_KEY')})
         return{
             token,
             user : {

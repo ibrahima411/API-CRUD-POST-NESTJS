@@ -7,7 +7,9 @@ import { ResetPasswordConfirmationDto } from './dto/reserPasswordConfirmation.dt
 import { AuthGuard } from '@nestjs/passport';
 import { Request } from 'express';
 import { DeleteAccountDto } from './dto/deleteAccount.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Utilisateur')
 @Controller('auth')
 export class AuthController {
     constructor(private readonly authService: AuthService){}
